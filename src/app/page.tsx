@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Gift } from "lucide-react";
+import { Phone, MapPin, Clock, Gift, Instagram } from "lucide-react";
 import Image from "next/image";
 
 interface MenuItem {
@@ -325,6 +325,17 @@ export default function Home() {
               >
                 Visualizza su Maps
               </a>
+              <div className="mt-2">
+                <a
+                  href="https://www.instagram.com/impasto212?igsh=OWo1dzh1a3E5M242"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center font-semibold text-white text-sm"
+                >
+                  <Instagram className="w-4 h-4 mr-2" />
+                  @impasto212
+                </a>
+              </div>
               <div className="mt-3 text-xs text-red-200">
                 <p className="font-semibold">Servizi disponibili:</p>
                 <p>• Asporto</p>
@@ -406,6 +417,17 @@ export default function Home() {
                 >
                   Visualizza su Maps
                 </a>
+                <div className="mt-2">
+                  <a
+                    href="https://www.instagram.com/impasto212?igsh=OWo1dzh1a3E5M242"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center text-red-200 hover:text-white text-sm"
+                  >
+                    <Instagram className="w-4 h-4 mr-2" />
+                    @impasto212
+                  </a>
+                </div>
               </div>
 
               {/* Contact Info */}
@@ -562,6 +584,17 @@ export default function Home() {
           <p className="text-gray-600 font-montserrat text-sm">
             &copy; {new Date().getFullYear()} Pizzeria Impasto 212. Tutti i
             diritti riservati.
+          </p>
+          <p className="text-gray-500 font-montserrat text-xs mt-2">
+            Made with ❤️ by{" "}
+            <a
+              href="https://www.instagram.com/bilel.it?igsh=c3M2cHNqcGJybHF3&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-600 hover:text-red-800 font-semibold"
+            >
+              BM
+            </a>
           </p>
         </div>
       </main>

@@ -9,16 +9,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Pizzeria Impasto 212 - Autentica Cucina Italiana",
+  title: "Pizzeria Impasto 212 - Bergamo | Autentica Cucina Halal",
   description:
-    "Pizzeria Impasto 212 offre autentica cucina italiana con ingredienti di qualità. Specializzata in pizze classiche, speciali, calzoni e panuozzi. Ordina online o vieni a trovarci!",
+    "Pizzeria Impasto 212 a Bergamo offre autentica cucina halal con ingredienti di qualità. Specializzata in pizze classiche, speciali, calzoni e panuozzi. Via della Vittoria, 1D - Tel: 035 0644 605",
   keywords:
-    "pizzeria, pizza, impasto, 212, cucina italiana, pizza napoletana, calzoni, panuozzi",
+    "pizzeria bergamo, pizza bergamo, impasto 212, cucina halal bergamo, pizza halal, calzoni, panuozzi, via della vittoria bergamo",
   authors: [{ name: "Pizzeria Impasto 212" }],
   openGraph: {
-    title: "Pizzeria Impasto 212 - Autentica Cucina Italiana",
+    title: "Pizzeria Impasto 212 - Bergamo | Autentica Cucina Halal",
     description:
-      "Pizzeria Impasto 212 offre autentica cucina italiana con ingredienti di qualità.",
+      "Pizzeria Impasto 212 a Bergamo offre autentica cucina halal con ingredienti di qualità. Via della Vittoria, 1D",
     type: "website",
     locale: "it_IT",
   },

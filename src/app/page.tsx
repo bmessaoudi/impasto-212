@@ -5,6 +5,7 @@ interface MenuItem {
   name: string;
   ingredients: string;
   price: number;
+  hasHalal?: boolean;
 }
 
 interface MenuSection {
@@ -35,6 +36,26 @@ const LogoComponent = ({
   );
 };
 
+// Componente per il bollino halal
+const HalalBadge = ({ size = "sm" }: { size?: "xs" | "sm" | "md" | "lg" }) => {
+  const sizeClasses = {
+    xs: "w-5 h-5",
+    sm: "w-6 h-6",
+    md: "w-8 h-8",
+    lg: "w-10 h-10",
+  };
+
+  return (
+    <Image
+      src="/halal-logo.svg"
+      alt="Halal"
+      width={24}
+      height={24}
+      className={`${sizeClasses[size]} inline-block`}
+    />
+  );
+};
+
 export default function Home() {
   const menuData: MenuSection[] = [
     {
@@ -55,6 +76,7 @@ export default function Home() {
           name: "DIAVOLA",
           ingredients: "pom, mozzarella fior di latte, salame piccante",
           price: 8.0,
+          hasHalal: true,
         },
         {
           name: "TONNO E CIPOLLE",
@@ -82,17 +104,20 @@ export default function Home() {
           ingredients:
             "pom, mozzarella fior di latte, funghi, carciofi, prosciutto",
           price: 8.0,
+          hasHalal: true,
         },
         {
           name: "BRESAOLINA",
           ingredients:
             "pom, mozzarella fior di latte, rucola, grana a scaglie, bresaola",
           price: 9.5,
+          hasHalal: true,
         },
         {
           name: "CICCIA",
           ingredients: "pom, mozzarella fior di latte, salsiccia, patatine",
           price: 8.5,
+          hasHalal: true,
         },
         {
           name: "BUFALINA",
@@ -109,6 +134,7 @@ export default function Home() {
           name: "AMERICANA",
           ingredients: "pom, mozzarella fior di latte, wurstel e patatine",
           price: 8.0,
+          hasHalal: true,
         },
       ],
     },
@@ -121,18 +147,21 @@ export default function Home() {
           ingredients:
             "pomodoro, mozzarella fior di latte, salsiccia, cipolla rossa, prezzemolo",
           price: 9.5,
+          hasHalal: true,
         },
         {
           name: "SPICY CRUNCH",
           ingredients:
             "pomodoro, mozzarella fior di latte, salame piccante, patate cheddar a scaglie",
           price: 10.0,
+          hasHalal: true,
         },
         {
           name: "SALAME LOVER",
           ingredients:
             "mozzarella fior di latte, salame piccante, olive nere, grana a scaglie",
           price: 9.5,
+          hasHalal: true,
         },
         {
           name: "CACIONA",
@@ -145,6 +174,7 @@ export default function Home() {
           ingredients:
             "pomodoro, mozzarella fior di latte, wurstel, patate al forno e scamorza",
           price: 9.5,
+          hasHalal: true,
         },
       ],
     },
@@ -181,6 +211,7 @@ export default function Home() {
           ingredients:
             "mozzarella fior di latte, pancetta, patate al forno, cipolle rosse, taleggio",
           price: 10.5,
+          hasHalal: true,
         },
       ],
     },
@@ -192,11 +223,13 @@ export default function Home() {
           name: "BLED 1",
           ingredients: "mozzarella fior di latte, prosciutto cotto",
           price: 7.5,
+          hasHalal: true,
         },
         {
           name: "BLED 2",
           ingredients: "mozzarella fior di latte, bresaola, rucola, grana",
           price: 8.5,
+          hasHalal: true,
         },
         {
           name: "BLED 3",
@@ -223,6 +256,7 @@ export default function Home() {
           name: "TAXI 2",
           ingredients: "mozzarella fior di latte, funghi, carciofi, prosciutto",
           price: 8.0,
+          hasHalal: true,
         },
         {
           name: "TAXI 3",
@@ -303,12 +337,15 @@ export default function Home() {
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
                 <LogoComponent className="w-14 h-14 mr-4" logoType="bianco" />
-                <h1 className="text-3xl font-bold font-montserrat">
-                  PIZZERIA <br /> IMPASTO 212
-                </h1>
+                <div className="flex items-center">
+                  <h1 className="text-3xl font-bold font-montserrat mr-3">
+                    PIZZERIA <br /> IMPASTO 212
+                  </h1>
+                  <HalalBadge size="lg" />
+                </div>
               </div>
               <p className="text-lg opacity-90 font-montserrat">
-                La nostra cucina rispetta i principi italiani per garantirti
+                La nostra cucina rispetta i principi halal per garantirti
                 qualità e fiducia
               </p>
             </div>
@@ -337,12 +374,15 @@ export default function Home() {
             <div className="text-center mb-4">
               <div className="flex items-center justify-center mb-3">
                 <LogoComponent className="w-12 h-12 mr-3" logoType="bianco" />
-                <h1 className="text-2xl md:text-3xl font-bold font-montserrat">
-                  PIZZERIA <br /> IMPASTO 212
-                </h1>
+                <div className="flex items-center">
+                  <h1 className="text-2xl md:text-3xl font-bold font-montserrat mr-3">
+                    PIZZERIA <br /> IMPASTO 212
+                  </h1>
+                  <HalalBadge size="md" />
+                </div>
               </div>
               <p className="text-base md:text-lg opacity-90 font-montserrat">
-                La nostra cucina rispetta i principi italiani per garantirti
+                La nostra cucina rispetta i principi halal per garantirti
                 qualità e fiducia
               </p>
             </div>
@@ -430,9 +470,12 @@ export default function Home() {
                     className="flex justify-between items-start"
                   >
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-800 text-sm md:text-base font-montserrat">
-                        {item.name}
-                      </h3>
+                      <div className="flex items-center">
+                        <h3 className="font-semibold text-gray-800 text-sm md:text-base font-montserrat mr-2">
+                          {item.name}
+                        </h3>
+                        {item.hasHalal && <HalalBadge size="sm" />}
+                      </div>
                       {item.ingredients && (
                         <p className="text-gray-600 text-xs md:text-sm mt-1">
                           {item.ingredients}

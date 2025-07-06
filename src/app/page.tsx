@@ -1,5 +1,6 @@
-import { Phone, MapPin, Clock, Gift, Instagram } from "lucide-react";
+import { Phone, MapPin, Clock, Gift, Instagram, Star } from "lucide-react";
 import Image from "next/image";
+import QRCode from "react-qr-code";
 
 interface MenuItem {
   name: string;
@@ -53,6 +54,27 @@ const HalalBadge = ({ size = "sm" }: { size?: "xs" | "sm" | "md" | "lg" }) => {
       height={24}
       className={`${sizeClasses[size]} inline-block`}
     />
+  );
+};
+
+// Componente per il QR Code
+const QRCodeComponent = ({
+  url,
+  size = 128,
+}: {
+  url: string;
+  size?: number;
+}) => {
+  return (
+    <div className="bg-white p-2 rounded border border-gray-300">
+      <QRCode
+        size={size}
+        value={url}
+        fgColor="#000000"
+        bgColor="#ffffff"
+        title="QR Code Recensioni Google"
+      />
+    </div>
   );
 };
 
@@ -301,6 +323,12 @@ export default function Home() {
     },
   ];
 
+  const recensioniGoogle = {
+    name: "RECENSIONI GOOGLE",
+    ingredients: "Lascia una recensione sulla nostra pagina Google",
+    url: "https://g.page/r/CdGalCMU3JvMEBM/review",
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
       {/* Header */}
@@ -336,11 +364,16 @@ export default function Home() {
                   @impasto212
                 </a>
               </div>
-              <div className="mt-3 text-xs text-red-200">
-                <p className="font-semibold">Servizi disponibili:</p>
-                <p>• Asporto</p>
-                <p>• Consegne domicilio</p>
-                <p>• Pizza a cornicione alto</p>
+              <div className="mt-2">
+                <a
+                  href="https://g.page/r/CdGalCMU3JvMEBM/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center font-semibold text-white text-sm"
+                >
+                  <Star className="w-4 h-4 mr-2" />
+                  Lascia una recensione
+                </a>
               </div>
             </div>
 
@@ -426,6 +459,17 @@ export default function Home() {
                   >
                     <Instagram className="w-4 h-4 mr-2" />
                     @impasto212
+                  </a>
+                </div>
+                <div className="mt-2">
+                  <a
+                    href="https://g.page/r/CdGalCMU3JvMEBM/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center text-red-200 hover:text-white text-sm"
+                  >
+                    <Star className="w-4 h-4 mr-2" />
+                    Lascia una recensione
                   </a>
                 </div>
               </div>
@@ -566,6 +610,30 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Recensioni Google Section */}
+          <div className="bg-blue-600 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <h2 className="text-2xl font-bold mb-4 text-center font-montserrat">
+              {recensioniGoogle.name}
+            </h2>
+            <div className="text-center">
+              <p className="text-blue-200 text-sm mb-4">
+                {recensioniGoogle.ingredients}
+              </p>
+              <div className="flex flex-col items-center space-y-4">
+                <QRCodeComponent url={recensioniGoogle.url} size={120} />
+                <a
+                  href={recensioniGoogle.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-50 transition-colors"
+                >
+                  <Star className="w-4 h-4 mr-2" />
+                  Lascia una recensione
+                </a>
+              </div>
             </div>
           </div>
         </div>

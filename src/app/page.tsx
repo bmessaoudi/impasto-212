@@ -313,7 +313,7 @@ export default function Home() {
     },
     {
       name: "AGGIUNTA INGREDIENTI EXTRA",
-      ingredients: "Qualsiasi ingrediente extra",
+      ingredients: "Qualsiasi ingrediente extra a partire da",
       price: 1.0,
     },
     {

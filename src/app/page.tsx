@@ -406,6 +406,10 @@ export default function Home() {
                 <span className="font-semibold font-montserrat">Orari:</span>
               </div>
               <div className="text-red-200 text-sm space-y-1">
+                <p className="font-semibold text-white">PRANZO:</p>
+                <p>Lun-Mer: 12:00-14:30</p>
+                <p>Gio-Sab: 12:00-14:30</p>
+                <p className="font-semibold text-white mt-2">CENA:</p>
                 <p>Lun, Mer-Ven: 17:30-22:00</p>
                 <p>Sab-Dom: 17:30-22:00</p>
                 <p className="font-semibold">Martedì: Chiuso</p>
@@ -490,6 +494,10 @@ export default function Home() {
                   <span className="font-semibold font-montserrat">Orari:</span>
                 </div>
                 <div className="text-red-200 text-sm space-y-1">
+                  <p className="font-semibold text-white">PRANZO:</p>
+                  <p>Lun-Mer: 12:00-14:30</p>
+                  <p>Gio-Sab: 12:00-14:30</p>
+                  <p className="font-semibold text-white mt-2">CENA:</p>
                   <p>Lun, Mer-Ven: 17:30-22:00</p>
                   <p>Sab-Dom: 17:30-22:00</p>
                   <p className="font-semibold">Martedì: Chiuso</p>
@@ -512,6 +520,22 @@ export default function Home() {
           <p className="text-sm md:text-base font-montserrat">
             <span className="font-semibold">Fino al 31 AGOSTO</span> - Ogni 2
             pizze una bibita in omaggio
+          </p>
+        </div>
+      </div>
+
+      {/* Apertura Pranzo */}
+      <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 px-4">
+        <div className="container mx-auto text-center">
+          <div className="flex items-center justify-center mb-2">
+            <Clock className="w-5 h-5 mr-2" />
+            <span className="font-bold text-lg font-montserrat">
+              APERTURA PRANZO
+            </span>
+          </div>
+          <p className="text-sm md:text-base font-montserrat">
+            <span className="font-semibold">Dal Lunedì al Sabato</span> - Aperto
+            anche a pranzo dalle 12:00 alle 14:30
           </p>
         </div>
       </div>

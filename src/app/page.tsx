@@ -407,8 +407,8 @@ export default function Home() {
               </div>
               <div className="text-red-200 text-sm space-y-1">
                 <p className="font-semibold text-white">PRANZO:</p>
-                <p>Lun-Mer: 12:00-14:30</p>
-                <p>Gio-Sab: 12:00-14:30</p>
+                <p>Lun-Mer: 12:00-14:00</p>
+                <p>Gio-Sab: 12:00-14:00</p>
                 <p className="font-semibold text-white mt-2">CENA:</p>
                 <p>Lun, Mer-Ven: 17:30-22:00</p>
                 <p>Sab-Dom: 17:30-22:00</p>
@@ -495,8 +495,8 @@ export default function Home() {
                 </div>
                 <div className="text-red-200 text-sm space-y-1">
                   <p className="font-semibold text-white">PRANZO:</p>
-                  <p>Lun-Mer: 12:00-14:30</p>
-                  <p>Gio-Sab: 12:00-14:30</p>
+                  <p>Lun-Mer: 12:00-14:00</p>
+                  <p>Gio-Sab: 12:00-14:00</p>
                   <p className="font-semibold text-white mt-2">CENA:</p>
                   <p>Lun, Mer-Ven: 17:30-22:00</p>
                   <p>Sab-Dom: 17:30-22:00</p>
@@ -535,7 +535,7 @@ export default function Home() {
           </div>
           <p className="text-sm md:text-base font-montserrat">
             <span className="font-semibold">Dal Lunedì al Sabato</span> - Aperto
-            anche a pranzo dalle 12:00 alle 14:30
+            anche a pranzo dalle 12:00 alle 14:00
           </p>
         </div>
       </div>

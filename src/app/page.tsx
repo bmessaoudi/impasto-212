@@ -158,20 +158,6 @@ export default function Home() {
           price: 8.0,
           hasHalal: true,
         },
-        {
-          name: "SPECKOLANA",
-          ingredients:
-            "pom, mozzarella fior di latte, scamorza affumicata, speck",
-          price: 9,
-          hasHalal: true,
-        },
-        {
-          name: "SELVAGGIA",
-          ingredients:
-            "pom, mozzarella fior di latte, funghi in asettico, crudo",
-          price: 9.5,
-          hasHalal: true,
-        },
       ],
     },
     {
@@ -209,6 +195,20 @@ export default function Home() {
           name: "WURSTEL AND CO",
           ingredients:
             "pomodoro, mozzarella fior di latte, wurstel, patate al forno e scamorza",
+          price: 9.5,
+          hasHalal: true,
+        },
+        {
+          name: "SPECKOLANA",
+          ingredients:
+            "pom, mozzarella fior di latte, scamorza affumicata, speck",
+          price: 9,
+          hasHalal: true,
+        },
+        {
+          name: "SELVAGGIA",
+          ingredients:
+            "pom, mozzarella fior di latte, funghi in asettico, crudo",
           price: 9.5,
           hasHalal: true,
         },

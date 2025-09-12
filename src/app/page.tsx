@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Gift, Instagram, Star } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram, Star } from "lucide-react";
 import Image from "next/image";
 import QRCode from "react-qr-code";
 
@@ -521,22 +521,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
-      {/* Promozione Nuova Apertura */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-4 px-4">
-        <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Gift className="w-5 h-5 mr-2" />
-            <span className="font-bold text-lg font-montserrat">
-              NUOVA APERTURA
-            </span>
-          </div>
-          <p className="text-sm md:text-base font-montserrat">
-            <span className="font-semibold">Fino al 31 AGOSTO</span> - Ogni 2
-            pizze una bibita in omaggio
-          </p>
-        </div>
-      </div>
 
       {/* Apertura Pranzo */}
       <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 px-4">

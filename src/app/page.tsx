@@ -212,6 +212,61 @@ export default function Home() {
           price: 9.5,
           hasHalal: true,
         },
+        {
+          name: "NDUJA&CO",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, nduja, patate al forno e provola affumicata",
+          price: 9.5,
+          hasHalal: true,
+        },
+        {
+          name: "PASTRAMI&CO",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, brie, rucola e pastrami alla paprika",
+          price: 10.5,
+          hasHalal: true,
+        },
+        {
+          name: "LA DECISA",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, pancetta affumicata, gorgonzola e noci",
+          price: 9.0,
+          hasHalal: true,
+        },
+        {
+          name: "SALERNO",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, salame piccante, patate al forno e cipolla rossa",
+          price: 9.5,
+          hasHalal: true,
+        },
+        {
+          name: "RUSTICA DEL SUD",
+          ingredients:
+            "mozzarella fior di latte, pancetta affumicata, rosmarino e gorgonzola",
+          price: 9.0,
+          hasHalal: true,
+        },
+        {
+          name: "PHILOMAR",
+          ingredients:
+            "mozzarella fior di latte, crema di philadelphia, zucchine e gamberetti",
+          price: 9.5,
+        },
+        {
+          name: "TOKCETTA",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, olive taggiasche e pancetta",
+          price: 9.0,
+          hasHalal: true,
+        },
+        {
+          name: "DELICATA",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, prosciutto cotto, porcini, grana",
+          price: 9.5,
+          hasHalal: true,
+        },
       ],
     },
     {

@@ -364,6 +364,7 @@ export default function Home() {
         { name: "MOZZARELLINE", ingredients: "", price: 4.5 },
         { name: "STEAK HOUSE", ingredients: "", price: 5.0 },
         { name: "CROCCHETTE DI PATATE", ingredients: "", price: 4.5 },
+        { name: "CROCCHETTE DI POLLO", ingredients: "8 pezzi", price: 5 },
       ],
     },
   ];

@@ -1,6 +1,7 @@
 import { Phone, MapPin, Clock, Instagram, Star } from "lucide-react";
 import Image from "next/image";
 import QRCode from "react-qr-code";
+import { SpecialPizzaBanner } from "@/components/SpecialPizzaBanner";
 
 interface MenuItem {
   name: string;
@@ -164,6 +165,17 @@ export default function Home() {
       title: "LE NOSTRE PIZZE SPECIALI",
       color: "text-teal-600",
       items: [
+        {
+          name: "CALABRESE 2.0",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, olive taggiasche, spianata Calabra, peperoni",
+          price: 10.5,
+        },
+        {
+          name: "MILANESE",
+          ingredients: "panna, mozzarella fior di latte, Salame Milano",
+          price: 10.0,
+        },
         {
           name: "212 SIGN",
           ingredients:
@@ -569,6 +581,7 @@ export default function Home() {
           </div>
         </div>
       </header>
+      <SpecialPizzaBanner />
 
       {/* Menu Content */}
       <main className="container mx-auto px-4 py-8">
@@ -576,8 +589,17 @@ export default function Home() {
           {menuData.map((section, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow ${
+                section.title === "LE NOSTRE PIZZE SPECIALI"
+                  ? "border-2 border-teal-500 relative overflow-hidden"
+                  : ""
+              }`}
             >
+              {section.title === "LE NOSTRE PIZZE SPECIALI" && (
+                <div className="absolute top-0 right-0 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                  CONSIGLIATE
+                </div>
+              )}
               <h2
                 className={`text-2xl font-bold mb-4 ${section.color} text-center font-montserrat`}
               >

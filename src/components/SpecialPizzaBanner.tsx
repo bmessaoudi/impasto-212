@@ -14,43 +14,80 @@ export const SpecialPizzaBanner = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {/* Calabrese 2.0 */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-5 shadow-sm border-2 border-red-800/20 transform hover:-translate-y-1 transition-transform duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          {/* IMPATTO 212 */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-sm border-2 border-red-800/20 transform hover:-translate-y-1 transition-transform duration-300">
             <div className="flex justify-between items-start mb-2">
-              <h3 className="font-bold text-xl font-montserrat text-red-800">
-                CALABRESE 2.0
+              <h3 className="font-bold text-lg font-montserrat text-red-800">
+                IMPATTO 212
               </h3>
               <span className="bg-red-600 text-white text-sm font-bold px-2 py-1 rounded">
                 € 10.50
               </span>
             </div>
-            <p className="text-gray-800 font-medium mb-3">
-              pomodoro, mozzarella fior di latte, olive taggiasche, spianata
-              Calabra, peperoni
+            <p className="text-gray-800 font-medium text-sm mb-3">
+              mozzarella fior di latte, bacon, patate al forno, rosmarino, scamorza affumicata
             </p>
             <div className="flex items-center text-sm text-red-700 font-semibold">
               <Star className="w-4 h-4 mr-1 fill-current" />
-              Gusto deciso
+              Ricca e saporita
             </div>
           </div>
 
-          {/* Milanese */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-5 shadow-sm border-2 border-red-800/20 transform hover:-translate-y-1 transition-transform duration-300">
+          {/* PANNA&MAIS */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-sm border-2 border-red-800/20 transform hover:-translate-y-1 transition-transform duration-300">
             <div className="flex justify-between items-start mb-2">
-              <h3 className="font-bold text-xl font-montserrat text-red-800">
-                MILANESE
+              <h3 className="font-bold text-lg font-montserrat text-red-800">
+                PANNA&MAIS
               </h3>
               <span className="bg-red-600 text-white text-sm font-bold px-2 py-1 rounded">
-                € 10.00
+                € 9.00
               </span>
             </div>
-            <p className="text-gray-800 font-medium mb-3">
-              panna, mozzarella fior di latte, Salame Milano
+            <p className="text-gray-800 font-medium text-sm mb-3">
+              mozzarella fior di latte, prosciutto cotto, mais, panna
             </p>
             <div className="flex items-center text-sm text-red-700 font-semibold">
               <Star className="w-4 h-4 mr-1 fill-current" />
-              Cremosa e saporita
+              Cremosa e dolce
+            </div>
+          </div>
+
+          {/* PASTRAMI 2.0 */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-sm border-2 border-red-800/20 transform hover:-translate-y-1 transition-transform duration-300">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-bold text-lg font-montserrat text-red-800">
+                PASTRAMI 2.0
+              </h3>
+              <span className="bg-red-600 text-white text-sm font-bold px-2 py-1 rounded">
+                € 11.00
+              </span>
+            </div>
+            <p className="text-gray-800 font-medium text-sm mb-3">
+              mozzarella fior di latte, funghi, gorgonzola
+            </p>
+            <div className="flex items-center text-sm text-red-700 font-semibold">
+              <Star className="w-4 h-4 mr-1 fill-current" />
+              Gusto intenso
+            </div>
+          </div>
+
+          {/* PAZZA */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-sm border-2 border-red-800/20 transform hover:-translate-y-1 transition-transform duration-300">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-bold text-lg font-montserrat text-red-800">
+                PAZZA
+              </h3>
+              <span className="bg-red-600 text-white text-sm font-bold px-2 py-1 rounded">
+                € 11.00
+              </span>
+            </div>
+            <p className="text-gray-800 font-medium text-sm mb-3">
+              pomodoro, mozzarella fior di latte, spianata calabra, pomodorini secchi, acciughe
+            </p>
+            <div className="flex items-center text-sm text-red-700 font-semibold">
+              <Star className="w-4 h-4 mr-1 fill-current" />
+              Mediterranea
             </div>
           </div>
         </div>

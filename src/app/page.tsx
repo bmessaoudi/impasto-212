@@ -173,8 +173,8 @@ export default function Home() {
         },
         {
           name: "MILANESE",
-          ingredients: "panna, mozzarella fior di latte, Salame Milano",
-          price: 10.0,
+          ingredients: "gorgonzola, mozzarella fior di latte, Salame Milano",
+          price: 9.0,
         },
         {
           name: "212 SIGN",
@@ -278,6 +278,31 @@ export default function Home() {
             "pomodoro, mozzarella fior di latte, prosciutto cotto, porcini, grana",
           price: 9.5,
           hasHalal: true,
+        },
+        {
+          name: "IMPATTO 212",
+          ingredients:
+            "mozzarella fior di latte, bacon, patate al forno, rosmarino, scamorza affumicata",
+          price: 10.5,
+          hasHalal: true,
+        },
+        {
+          name: "PANNA&MAIS",
+          ingredients:
+            "mozzarella fior di latte, prosciutto cotto, mais, panna",
+          price: 9.0,
+          hasHalal: true,
+        },
+        {
+          name: "PASTRAMI 2.0",
+          ingredients: "mozzarella fior di latte, funghi, gorgonzola",
+          price: 11.0,
+        },
+        {
+          name: "PAZZA",
+          ingredients:
+            "pomodoro, mozzarella fior di latte, spianata calabra, pomodorini secchi, acciughe",
+          price: 11.0,
         },
       ],
     },

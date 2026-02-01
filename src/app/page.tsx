@@ -295,7 +295,7 @@ export default function Home() {
         },
         {
           name: "PASTRAMI 2.0",
-          ingredients: "mozzarella fior di latte, funghi, gorgonzola",
+          ingredients: "mozzarella fior di latte, funghi, gorgonzola, pastrami",
           price: 11.0,
         },
         {

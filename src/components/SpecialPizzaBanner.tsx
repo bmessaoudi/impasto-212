@@ -64,7 +64,7 @@ export const SpecialPizzaBanner = () => {
               </span>
             </div>
             <p className="text-gray-800 font-medium text-sm mb-3">
-              mozzarella fior di latte, funghi, gorgonzola
+              mozzarella fior di latte, funghi, gorgonzola, pastrami
             </p>
             <div className="flex items-center text-sm text-red-700 font-semibold">
               <Star className="w-4 h-4 mr-1 fill-current" />

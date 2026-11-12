@@ -1,89 +1,70 @@
 # Pizzeria Impasto 212
 
-Un sito web moderno e responsive per la Pizzeria Impasto 212, costruito con Next.js 14, React 18, TypeScript e Tailwind CSS.
+Sito e menu digitale della Pizzeria Impasto 212, pizzeria halal in Via della Vittoria 1D a Bergamo.
 
-## Caratteristiche
+**Sito live: [pizzeriaimpasto212.it](https://pizzeriaimpasto212.it)**
 
-- **Responsive Design**: Ottimizzato per desktop, tablet e mobile
-- **Menu Completo**: Visualizza tutte le categorie di pizza e prodotti
-- **Design Moderno**: Interfaccia pulita e accattivante
-- **Performance**: Costruito con Next.js 14 per prestazioni ottimali
-- **Accessibilità**: Progettato seguendo le best practices per l'accessibilità
+## Cosa contiene
 
-## Menu Disponibile
+- Menu completo con prezzi e ingredienti: pizze classiche, pizze speciali, pizze bianche, panuozzi, calzoni, fritture e bibite
+- Banner per le novità del menu
+- Contatti, orari, link a Google Maps e Instagram
+- QR code per lasciare una recensione su Google
+- Manifest PWA, per aggiungere il sito alla schermata home del telefono
+- Metadata SEO (Open Graph, dati di contatto e posizione)
 
-- **Pizze Classiche**: Marinara, Margherita, Diavola, e altre specialità tradizionali
-- **Pizze Speciali**: Creazioni uniche della casa come 212 Sign e Spicy Crunch
-- **Pizze Bianche**: Selezione di pizze senza pomodoro
-- **Panuozzi**: Panini napoletani tradizionali
-- **Calzoni**: Pizze chiuse ripiene
-- **Fritture**: Antipasti fritti
-- **Bibite**: Selezione di bevande
+## Stack
 
-## Tecnologie Utilizzate
+- [Next.js 14](https://nextjs.org/) con App Router
+- React 18 e TypeScript
+- Tailwind CSS
+- Radix UI (dialog, separator) e Lucide per le icone
+- react-qr-code
 
-- **Next.js 14**: Framework React per applicazioni moderne
-- **React 18**: Libreria per interfacce utente
-- **TypeScript**: Tipizzazione statica per JavaScript
-- **Tailwind CSS**: Framework CSS utility-first
-- **Radix UI**: Componenti accessibili
-- **Lucide React**: Icone moderne
+## Sviluppo locale
 
-## Installazione e Avvio
-
-1. Clona il repository
-2. Installa le dipendenze:
-   ```bash
-   npm install
-   ```
-3. Avvia il server di sviluppo:
+Il progetto usa [pnpm](https://pnpm.io/) (versione indicata nel campo `packageManager` di `package.json`).
 
 ```bash
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-4. Apri [http://localhost:3000](http://localhost:3000) nel tuo browser
+Poi apri [http://localhost:3000](http://localhost:3000).
 
-## Comandi Disponibili
+| Comando | Cosa fa |
+|---------|---------|
+| `pnpm dev` | Server di sviluppo |
+| `pnpm build` | Build di produzione |
+| `pnpm start` | Avvia la build di produzione |
+| `pnpm lint` | ESLint |
 
-- `npm run dev` - Avvia il server di sviluppo
-- `npm run build` - Costruisce l'applicazione per la produzione
-- `npm run start` - Avvia il server di produzione
-- `npm run lint` - Esegue il linting del codice
+## Modificare il menu
 
-## Personalizzazione
+I dati del menu sono in `src/app/page.tsx`:
 
-Per personalizzare il menu o le informazioni della pizzeria, modifica i dati nel file `src/app/page.tsx`:
+- le sezioni e i prodotti sono nell'array `menuData`, con nome, ingredienti e prezzo di ogni voce
+- contatti e orari sono nel footer della stessa pagina; i dati di contatto usati per la SEO sono in `src/app/layout.tsx`
+- il banner delle novità è in `src/components/SpecialPizzaBanner.tsx`
 
-- **Menu Items**: Modifica l'array `menuData` per aggiungere/rimuovere elementi del menu
-- **Prezzi**: Aggiorna i prezzi nell'oggetto `price` di ogni elemento
-- **Informazioni Contatto**: Aggiorna il footer con i dettagli corretti della pizzeria
-
-## Struttura del Progetto
+## Struttura
 
 ```
 src/
 ├── app/
-│   ├── fonts/          # Font personalizzati
+│   ├── layout.tsx      # Layout e metadata SEO
+│   ├── page.tsx        # Pagina del menu e dati
 │   ├── globals.css     # Stili globali
-│   ├── layout.tsx      # Layout principale
-│   └── page.tsx        # Pagina principale del menu
+│   └── manifest.json   # Manifest PWA
+└── components/
+    └── SpecialPizzaBanner.tsx
+public/                 # Loghi e icone
 ```
 
-## Contribuzioni
+## Deploy
 
-Per contribuire al progetto:
-
-1. Fai un fork del repository
-2. Crea un branch per la tua feature
-3. Commit delle tue modifiche
-4. Push al branch
-5. Apri una Pull Request
+Il sito è pubblicato su Vercel: ogni push su `main` va in produzione su [pizzeriaimpasto212.it](https://pizzeriaimpasto212.it).
 
 ## Licenza
 
-Questo progetto è proprietà della Pizzeria Impasto 212. Tutti i diritti riservati.
-
----
-
-**Pizzeria Impasto 212** - La nostra cucina rispetta i principi italiani per garantirti qualità e fiducia.
+Codice e contenuti sono di proprietà della Pizzeria Impasto 212. Tutti i diritti riservati.

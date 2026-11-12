@@ -49,9 +49,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   openGraph: {
     title: "Pizzeria Impasto 212 - Bergamo | Autentica Cucina Halal",
     description:

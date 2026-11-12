@@ -46,7 +46,7 @@ public/                     # Asset statici (loghi, icone PWA)
 
 | File | Scopo |
 |------|-------|
-| `src/app/layout.tsx:11-92` | Metadata SEO completi (OG, Twitter, geo) |
+| `src/app/layout.tsx` | Metadata SEO completi (OG, Twitter, geo) |
 | `src/app/page.tsx:83-382` | Dati menu (sezioni, prezzi, ingredienti) |
 | `src/app/page.tsx:20-80` | Componenti riutilizzabili (Logo, HalalBadge, QRCode) |
 | `src/components/SpecialPizzaBanner.tsx` | Banner promozionale pizze speciali |
@@ -58,10 +58,11 @@ public/                     # Asset statici (loghi, icone PWA)
 ## Comandi Essenziali
 
 ```bash
-npm run dev       # Server di sviluppo (localhost:3000)
-npm run build     # Build produzione
-npm run start     # Avvia server produzione
-npm run lint      # Esegui ESLint
+pnpm install      # Installa le dipendenze
+pnpm dev          # Server di sviluppo (localhost:3000)
+pnpm build        # Build produzione
+pnpm start        # Avvia server produzione
+pnpm lint         # Esegui ESLint
 ```
 
 ---
@@ -114,4 +115,4 @@ Consulta questi file per argomenti specifici:
 1. **Aggiungere nuove pizze**: Modifica array in `src/app/page.tsx:83-382`
 2. **Modificare orari/contatti**: Aggiorna `src/app/page.tsx:550-580` e metadata in `layout.tsx`
 3. **Aggiungere banner promozionali**: Usa `SpecialPizzaBanner.tsx` come riferimento
-4. **Modificare colori sezioni**: Aggiorna proprieta `color` in `menuSections` array
+4. **Modificare colori sezioni**: Aggiorna proprieta `color` nell'array `menuData`

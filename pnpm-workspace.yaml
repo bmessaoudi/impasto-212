@@ -1,0 +1,3 @@
+allowBuilds:
+  # Ha binari precompilati per piattaforma e serve solo a ESLint: lo script di build non serve.
+  unrs-resolver: false
